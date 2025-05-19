@@ -19,7 +19,7 @@ endif ()
 find_package(Python3 COMPONENTS Interpreter REQUIRED)
 
 if (NOT DEFINED FILE_FSEAMER_PY)
-    find_file(FILE_FSEAMER_PY FSeamerFile.py)
+    find_file(FILE_FSEAMER_PY FSeamerFile.py ${CMAKE_CURRENT_SOURCE_DIR}/../Generator)
 endif()
 set(FSEAM_GENERATOR_COMMMAND ${Python3_EXECUTABLE} ${FILE_FSEAMER_PY})
 message(STATUS "Fseam Generator command : ${FSEAM_GENERATOR_COMMMAND}")
